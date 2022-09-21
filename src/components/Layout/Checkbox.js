@@ -9,15 +9,15 @@ export default function Checkbox({ label, ...props }) {
   const checkboxRef = useRef(null)
   const { handleSettings } = useContext(SettingsContext)
 
-  useEffect(() => {
-    // * dispatch a new click event to trigger handleChange
-    const event = new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      view: window,
-    })
-    checkboxRef.current.dispatchEvent(event)
-  }, [checkboxRef])
+  // useEffect(() => {
+  //   // * dispatch a new click event to trigger handleChange
+  //   const event = new MouseEvent("click", {
+  //     bubbles: true,
+  //     cancelable: true,
+  //     view: window,
+  //   })
+  //   checkboxRef.current.dispatchEvent(event)
+  // }, [checkboxRef])
 
   const handleChange = (e) => {
     setChecked(e.target.checked)
