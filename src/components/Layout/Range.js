@@ -14,9 +14,6 @@ export default function Range({ ...props }) {
   const handleInput = (e) => {
     const { name, value, min, max } = e.target
     handleSettings(name, value)
-    // if (typeof handleValueFromParent === "function") {
-    //   handleValueFromParent(name, value)
-    // }
 
     /*
      * Set the progress bar width based on Range value.
