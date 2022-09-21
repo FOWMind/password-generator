@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useState, useRef, useContext, useEffect } from "react"
 import { SettingsContext } from "../../contexts/SettingsContext"
 
-import { GrFormCheckmark } from "react-icons/gr"
+import { GoCheck } from "react-icons/go"
 
 export default function Checkbox({ label, ...props }) {
   const [checked, setChecked] = useState(false)
@@ -24,7 +24,7 @@ export default function Checkbox({ label, ...props }) {
         <CheckboxLabelItem checked={checked}>
           {checked && (
             <CheckboxLabelItemIcon>
-              <GrFormCheckmark />
+              <GoCheck />
             </CheckboxLabelItemIcon>
           )}
         </CheckboxLabelItem>
