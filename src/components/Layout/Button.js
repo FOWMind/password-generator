@@ -12,4 +12,15 @@ export const Button = styled.button`
   color: #24542b;
   background-color: #a4ffaf;
   cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #a4ffaf;
+    color: #a4ffaf;
+  }
+
+  & > svg {
+    margin-left: 0.5rem;
+    vertical-align: text-top;
+  }
 `

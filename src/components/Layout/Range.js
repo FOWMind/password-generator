@@ -57,11 +57,18 @@ const StyledRange = styled.input`
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
     border-radius: 50%;
     background-color: #e4e3e7;
     cursor: grab;
+
+    &:hover,
+    &:active {
+      border-color: #a8fdb0;
+      background-color: #17161e;
+    }
 
     &:active {
       cursor: grabbing;

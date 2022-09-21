@@ -15,7 +15,7 @@ export default function PasswordSettings() {
             {settings.characterLength && (
               <CharacterLength length={settings.characterLength} />
             )}
-            <Settings handleValues={(values) => console.log(values)}>
+            <Settings>
               <SettingsInputs />
             </Settings>
           </>

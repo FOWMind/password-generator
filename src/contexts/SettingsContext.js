@@ -2,7 +2,7 @@ import { createContext, useState } from "react"
 
 export const SettingsContext = createContext()
 
-export default function SettingsProvider({ children }) {
+export function SettingsProvider({ children }) {
   const [settings, setSettings] = useState({})
 
   const handleSettings = (name, value) => {

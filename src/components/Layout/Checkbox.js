@@ -27,7 +27,7 @@ export default function Checkbox({ label, ...props }) {
   return (
     <Container>
       <CheckboxLabel>
-        <CheckboxLabelItem>
+        <CheckboxLabelItem checked={checked}>
           {checked && (
             <CheckboxLabelItemIcon>
               <GrFormCheckmark />
@@ -66,12 +66,19 @@ const CheckboxLabelItem = styled.div`
   height: 1rem;
   vertical-align: text-top;
   display: inline-block;
-  background-color: #a8fdb0;
+  background-color: ${({ checked }) => (checked ? "#a8fdb0" : "transparent")};
+  border: 2px solid ${({ checked }) => (checked ? "transparent" : "#e4e3e7")};
+
+  &:hover {
+    border-color: ${({ checked }) => (!checked ? "#a8fdb0" : "")};
+  }
 `
 
 const CheckboxLabelItemIcon = styled.div`
   display: block;
   font-size: 1rem;
+  // * used to counter move by border
+  margin: -2px 0 0 -2px;
 `
 
 const StyledCheckbox = styled.input`
