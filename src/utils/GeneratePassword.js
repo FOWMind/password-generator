@@ -17,6 +17,7 @@ export function GeneratePassword({
     ...(includeSymbols ? symbols : []),
   ]
   const availableCharactersLength = availableCharacters.length
+  if (!availableCharactersLength) return
 
   let password = ""
   for (let i = 0; i < characterLength; i++) {
