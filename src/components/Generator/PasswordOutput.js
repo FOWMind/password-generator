@@ -1,12 +1,46 @@
 import styled from "styled-components"
+import { useState } from "react"
+import { CopyToClipboard } from "../../utils/CopyToClipboard"
+import { FaRegCopy } from "react-icons/fa"
 
 import { Button } from "../Layout/Button"
+import Alert from "../Layout/Alert"
 
-export default function PasswordOutput() {
+export default function PasswordOutput({ password }) {
+  const [alert, setAlert] = useState("")
+  const [alertSuccess, setAlertSuccess] = useState(true)
+
+  const copyPassword = () => {
+    CopyToClipboard(
+      password,
+      () => {
+        // success
+        setAlertSuccess(true)
+        setAlert("Successfully copied")
+      },
+      () => {
+        // fail
+        setAlertSuccess(false)
+        setAlert("Failed to copy")
+      }
+    )
+  }
+
+  const hideAlert = () => {
+    return setAlert(null)
+  }
+
   return (
     <Container>
-      <Output>PTx1f5DaFX</Output>
-      {/* <Button>Icon</Button> */}
+      <Output>{password.toString()}</Output>
+      <Button icon onClick={copyPassword}>
+        <FaRegCopy />
+      </Button>
+      {alert && (
+        <Alert onEnd={hideAlert} success={alertSuccess}>
+          {alert}
+        </Alert>
+      )}
     </Container>
   )
 }
@@ -21,5 +55,6 @@ const Container = styled.div`
 
 const Output = styled.p`
   font-size: 1.5rem;
-  color: #fff;
+  color: #e4e3e7;
+  word-break: break-all;
 `

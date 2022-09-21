@@ -8,19 +8,19 @@ export default function SettingsInputs() {
     <>
       <Range
         name="characterLength"
-        min={0}
+        min={2}
         max={20}
         steps={1}
         defaultValue={config?.rangeDefaultValue}
       />
       <Checkboxes>
         <Checkbox
-          name="uppercaseLetters"
+          name="includeUppercase"
           defaultChecked
           label="Include Uppercase Letters"
         />
         <Checkbox
-          name="lowercaseLetters"
+          name="includeLowercase"
           defaultChecked
           label="Include Lowercase Letters"
         />

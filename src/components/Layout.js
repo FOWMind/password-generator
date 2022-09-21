@@ -9,4 +9,8 @@ const StyledLayout = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 `

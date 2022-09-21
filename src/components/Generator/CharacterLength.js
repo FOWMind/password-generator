@@ -19,6 +19,7 @@ const Container = styled.div`
 const CharacterLengthText = styled.p`
   color: #e4e3e7;
   font-size: 1rem;
+  word-break: break-all;
 `
 
 const CharacterLengthValue = styled.span`
