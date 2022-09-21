@@ -14,7 +14,9 @@ export default function Generator() {
   const { settings } = useContext(SettingsContext)
 
   const handleClick = () => {
-    return setPassword(GeneratePassword(settings))
+    const generatedPassword = GeneratePassword(settings)
+    if (!generatedPassword) return
+    return setPassword(generatedPassword)
   }
 
   useEffect(() => {
