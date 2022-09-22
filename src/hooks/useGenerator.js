@@ -29,11 +29,11 @@ export default function useGenerator() {
   }
 
   useEffect(() => {
-    // Generate password on initial render
+    // Generate password and strength on initial render
     if (!password) {
-      setPassword(GeneratePassword(settings))
+      generatePasswordAndStrength()
     }
-  }, [password, settings])
+  }, [password, settings, generatePasswordAndStrength])
 
   return { password, strength, generatePasswordAndStrength }
 }
