@@ -25,7 +25,7 @@ export default function Alert({ onEnd, success, children }) {
       clearTimeout(animationTimeout)
       clearTimeout(endTimeout)
     }
-  }, [onEnd])
+  }, [onEnd, alertAnimationTime, alertTime])
 
   return (
     <StyledAlert
