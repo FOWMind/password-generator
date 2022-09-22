@@ -17,7 +17,7 @@ const Container = styled.div`
 `
 
 const CharacterLengthText = styled.p`
-  color: #e4e3e7;
+  color: #d4d3d9;
   font-size: 1rem;
   word-break: break-all;
 `

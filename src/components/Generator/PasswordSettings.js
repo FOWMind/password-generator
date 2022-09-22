@@ -26,7 +26,5 @@ export default function PasswordSettings() {
 }
 
 const Container = styled.div`
-  background-color: #24232b;
   margin: 1rem 0;
-  padding: 1rem 1.5rem;
 `

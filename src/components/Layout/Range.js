@@ -58,7 +58,7 @@ const StyledRange = styled.input`
     height: 20px;
     border: 2px solid transparent;
     border-radius: 50%;
-    background-color: #e4e3e7;
+    background-color: #d4d3d9;
     cursor: grab;
 
     &:hover,

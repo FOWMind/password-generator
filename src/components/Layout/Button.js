@@ -16,7 +16,7 @@ export const Button = styled.button`
   &:hover {
     background-color: transparent;
     border-color: ${({ icon }) => (icon ? "transparent" : "#a4ffaf")};
-    color: ${({ icon }) => (icon ? "#e4e3e7" : "#a4ffaf")};
+    color: ${({ icon }) => (icon ? "#D4D3D9" : "#a4ffaf")};
   }
 
   & > svg {

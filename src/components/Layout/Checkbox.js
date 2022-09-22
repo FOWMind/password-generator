@@ -60,7 +60,7 @@ const CheckboxLabelItem = styled.div`
   vertical-align: text-top;
   display: inline-block;
   background-color: ${({ checked }) => (checked ? "#a8fdb0" : "transparent")};
-  border: 2px solid ${({ checked }) => (checked ? "transparent" : "#e4e3e7")};
+  border: 2px solid ${({ checked }) => (checked ? "transparent" : "#D4D3D9")};
 
   &:hover {
     border-color: ${({ checked }) => (!checked ? "#a8fdb0" : "")};
@@ -81,6 +81,6 @@ const StyledCheckbox = styled.input`
 const CheckboxText = styled.span`
   font-size: 1rem;
   font-weight: 500;
-  color: #e4e3e7;
+  color: #d4d3d9;
   margin-left: 1rem;
 `

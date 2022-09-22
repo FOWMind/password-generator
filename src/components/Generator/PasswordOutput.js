@@ -55,6 +55,7 @@ const Container = styled.div`
 
 const Output = styled.p`
   font-size: 1.5rem;
-  color: #e4e3e7;
+  font-weight: 700;
+  color: #d4d3d9;
   word-break: break-all;
 `
