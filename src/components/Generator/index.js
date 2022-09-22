@@ -49,11 +49,11 @@ export default function Generator() {
       <GeneratorBox>
         <PasswordSettings />
         <PasswordStrength strength={strength} />
+        <GenerateButton type="button" onClick={handleClick}>
+          Generate
+          <FiArrowRight />
+        </GenerateButton>
       </GeneratorBox>
-      <GenerateButton type="button" onClick={handleClick}>
-        Generate
-        <FiArrowRight />
-      </GenerateButton>
     </Container>
   )
 }
@@ -61,6 +61,7 @@ export default function Generator() {
 const Container = styled.div`
   width: 90%;
   max-width: 45ch;
+  padding: 1rem 0;
 `
 
 const GeneratorTitle = styled(Title)`
@@ -75,6 +76,7 @@ const GeneratorBox = styled.div`
 `
 
 const GenerateButton = styled(Button)`
+  margin-top: 1.5rem;
   & > svg {
     transition: transform 0.15s;
   }

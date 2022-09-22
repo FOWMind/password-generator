@@ -35,6 +35,7 @@ const StrengthText = styled.p`
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
+  word-break: break-all;
 `
 
 const StrengthValueContainer = styled.div`
@@ -48,6 +49,7 @@ const StrengthValueText = styled.strong`
   text-transform: uppercase;
   color: #d4d3d9;
   margin-right: 0.75rem;
+  word-break: break-all;
 `
 
 const StrengthValueBars = styled.div``

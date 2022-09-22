@@ -26,5 +26,5 @@ export default function PasswordSettings() {
 }
 
 const Container = styled.div`
-  margin: 1rem 0;
+  margin-bottom: 1.5rem;
 `
