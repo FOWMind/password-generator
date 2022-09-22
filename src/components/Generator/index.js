@@ -16,21 +16,23 @@ export default function Generator() {
   const [strength, setStrength] = useState({})
   const { settings } = useContext(SettingsContext)
 
-  const handlePassword = () => {
+  const handlePassword = (onPasswordGeneration = () => {}) => {
     const generatedPassword = GeneratePassword(settings)
     if (!generatedPassword) return
     setPassword(generatedPassword)
+    return onPasswordGeneration(generatedPassword)
   }
 
-  const handlePasswordStrength = () => {
+  const handlePasswordStrength = (password) => {
     const pwdStrength = passwordStrength(password)
     if (!pwdStrength) return
     return setStrength({ value: pwdStrength.value, id: pwdStrength.id })
   }
 
   const handleClick = () => {
-    handlePasswordStrength()
-    handlePassword()
+    handlePassword((generatedPassword) => {
+      handlePasswordStrength(generatedPassword)
+    })
   }
 
   useEffect(() => {
