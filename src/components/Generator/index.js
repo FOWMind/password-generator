@@ -1,9 +1,7 @@
 import styled from "styled-components"
-import { useState, useContext, useEffect } from "react"
 import { FiArrowRight } from "react-icons/fi"
-import { SettingsContext } from "../../contexts/SettingsContext"
-import { GeneratePassword } from "../../utils/GeneratePassword"
-import { passwordStrength } from "check-password-strength"
+
+import useGenerator from "../../hooks/useGenerator"
 
 import { Title } from "../Layout/Title"
 import { Button } from "../Layout/Button"
@@ -12,36 +10,7 @@ import PasswordSettings from "./PasswordSettings"
 import PasswordStrength from "./PasswordStrength"
 
 export default function Generator() {
-  const [password, setPassword] = useState("")
-  const [strength, setStrength] = useState({})
-  const { settings } = useContext(SettingsContext)
-
-  const handlePassword = (onPasswordGeneration = () => {}) => {
-    const generatedPassword = GeneratePassword(settings)
-    if (!generatedPassword) return
-    setPassword(generatedPassword)
-    return onPasswordGeneration(generatedPassword)
-  }
-
-  const handlePasswordStrength = (password) => {
-    const pwdStrength = passwordStrength(password)
-    if (!pwdStrength) return
-    return setStrength({ value: pwdStrength.value, id: pwdStrength.id })
-  }
-
-  const handleClick = () => {
-    handlePassword((generatedPassword) => {
-      handlePasswordStrength(generatedPassword)
-    })
-  }
-
-  useEffect(() => {
-    // Generate password on initial render
-    if (!password) {
-      setPassword(GeneratePassword(settings))
-    }
-  }, [password, settings])
-
+  const { password, strength, generatePasswordAndStrength } = useGenerator()
   return (
     <Container>
       <GeneratorTitle>Password Generator</GeneratorTitle>
@@ -49,7 +18,7 @@ export default function Generator() {
       <GeneratorBox>
         <PasswordSettings />
         <PasswordStrength strength={strength} />
-        <GenerateButton type="button" onClick={handleClick}>
+        <GenerateButton type="button" onClick={generatePasswordAndStrength}>
           Generate
           <FiArrowRight />
         </GenerateButton>
