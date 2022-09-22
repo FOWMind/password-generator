@@ -15,7 +15,7 @@ You can see the project on [its page](https://password-generator-fowmind.vercel.
 - Run `git clone https://github.com/FOWMind/password-generator.git` command.
   A new folder called password-generator will be created in that directory.
   You can explore the files if you want.
-- Open the new folder called **password-generator**
+- Open the new folder called **password-generator** in the terminal.
 - Run `npm install` command and wait to Node Package Manager to install all the required packages for the project.
 - Run `npm start` and you would see the project in your browser!
 
