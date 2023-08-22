@@ -46,8 +46,8 @@ const StyledRange = styled.input`
     linear,
     50% 0%,
     50% 100%,
-    color-stop(0%, #a8fdb0),
-    color-stop(100%, #a8fdb0)
+    color-stop(0%, white),
+    color-stop(100%, white)
   );
   background-size: 50% 100%;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ const StyledRange = styled.input`
 
     &:hover,
     &:active {
-      border-color: #a8fdb0;
+      border-color: white;
       background-color: #17161e;
     }
 
@@ -73,6 +73,6 @@ const StyledRange = styled.input`
   }
 
   &::-moz-range-progress {
-    background-color: #a8fdb0;
+    background-color: #242332b;
   }
 `

@@ -59,11 +59,11 @@ const CheckboxLabelItem = styled.div`
   height: 1rem;
   vertical-align: text-top;
   display: inline-block;
-  background-color: ${({ checked }) => (checked ? "#a8fdb0" : "transparent")};
+  background-color: ${({ checked }) => (checked ? "#transparent" : "transparent")};
   border: 2px solid ${({ checked }) => (checked ? "transparent" : "#D4D3D9")};
 
   &:hover {
-    border-color: ${({ checked }) => (!checked ? "#a8fdb0" : "")};
+    border-color: ${({ checked }) => (!checked ? "#242332b" : "")};
   }
 `
 

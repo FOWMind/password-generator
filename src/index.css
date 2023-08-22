@@ -1,5 +1,5 @@
 :root {
-  --body-bg: #09080d;
+  --body-bg: #000000;
 }
 
 * {
@@ -15,7 +15,9 @@ html {
 
 body {
   min-height: 100%;
-  font-family: "Inconsolata", monospace, sans-serif;
-  font-weight: 500;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
   background-color: var(--body-bg);
 }
